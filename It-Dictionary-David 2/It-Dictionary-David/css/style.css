@@ -1,0 +1,78 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url(/img/night-1z0pI4rK.webp);
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.quick-menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.quick-menu a {
+    color: white;
+    background-color: #222;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.quick-menu a:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+.info {
+    background-color: #222;
+    width: 700px;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.info p {
+    line-height: 1.5;
+}
+
+.info li {
+    margin-bottom: 5px;
+}
+
+.side {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin: auto;
+}
+
+.side a {
+    color: white;
+    background-color: #222;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.side a:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+img {
+    max-width: 500px;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+}

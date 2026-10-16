@@ -1,0 +1,173 @@
+/*universal*/
+
+/*Rules*/
+body {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    background-color: #F3EFE7;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+    font-size: 3rem;
+}
+
+p,
+h1 {
+    color: #181A1F;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+/*top bar*/
+.top-bar {
+    position: fixed;
+
+    top: 0;
+    width: 100%;
+
+    background-color: #6F8FAF;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    padding: 15px;
+    gap: 50px;
+    color: black;
+
+    border: solid 1px black;
+}
+
+#home-link {
+    position: fixed;
+    left: 10px;
+}
+
+#page-group {
+    display: flex;
+}
+
+#hub-link {
+    position: fixed;
+    right: 10px;
+}
+
+#home-link,
+#page-group,
+#hub-link {
+    border: solid 1px black;
+    border-radius: 20px;
+    padding: 8px 12px 8px 12px;
+    background-color: #F3EFE7;
+}
+
+/*main page*/
+.main {
+    position: fixed;
+
+    bottom: 80px;
+    right: -50%;
+    left: -50%;
+    margin: auto;
+    padding: 20px 0 0 20px;
+
+    height: 75vh;
+    width: 75%;
+
+    border: solid 1px black;
+    border-radius: 20px;
+    background-color: #6F8FAF;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+.main h1 {
+    place-self: center;
+}
+
+.main-text {
+    padding: 0 0 0 60px;
+}
+
+.img {
+    position: fixed;
+
+    right: 280px;
+    top: 280px;
+
+    border: solid 1px black;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+.bottom-buttons {
+    position: fixed;
+    
+    bottom: 140px;
+    padding: 0 0 0 40px;
+}
+
+.skip-buttons {
+    padding: 20px 120px 20px 120px;
+
+    border: solid 1px black;
+    border-radius: 20px;
+    background-color: #F3EFE7;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+.source-button {
+    position: fixed;
+
+    right: 240px;
+    bottom: 140px;
+    padding: 0 40px 0 0;
+}
+
+.source {
+    padding: 20px 120px 20px 120px;
+
+    border: solid 1px black;
+    border-radius: 20px;
+    background-color: #F3EFE7;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+/*img size fix*/
+
+#comp {
+    width: 500px;
+    height: 500px;
+}
+
+#data-img {
+    width: 500px;
+    height: 500px;
+}
+
+#firewall {
+    width: 400px;
+    height: 400px;
+}
+
+#malware-img {
+    width: 500px;
+    height: 500px;
+}

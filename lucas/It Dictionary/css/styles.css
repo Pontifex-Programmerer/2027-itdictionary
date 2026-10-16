@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #334155;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+.topnav a {
+
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.centered a {
+ float: bottom;
+  position: relative;
+  top: 50%;
+  left: 24%;
+  
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.bottomnav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+}
+
+.bottomnav a {
+  flex: 1;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.bottomnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+body:not(.bottomnav) {
+  padding-bottom: 80px;
+}
+
+#main {
+  position: relative; 
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  max-width: 720px;
+  width: 100%;
+  padding: 32px;
+  padding-bottom: 70px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.sources-container {
+  position: absolute;
+  bottom: 24px; 
+  right: 32px;  
+  z-index: 10000;
+}
+
+.sources-btn:hover {
+  background-color: #dbeafe;
+}
+
+
+.sources-btn {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: #eff6ff;
+  
+}
+
+
+#main h1 {
+  font-family: "Arial Rounded MT Bold", "Comic Sans MS", "Quicksand", sans-serif;
+  font-size: 32px;
+  color: #0f172a;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+.sub {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+}
+
+.sub img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.sub p {
+  line-height: 2;
+  color: #475569;
+  font-size: Times New Roman, Times, serif;
+}
+
