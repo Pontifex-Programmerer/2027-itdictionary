@@ -1,0 +1,134 @@
+body { /* Kroppen, eller hva du ser */
+    background-color: #031E2B;
+    color: #111111;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+section {
+    background-color: #67a39b;
+    width: 90%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+h1 { /* My english IT-dictionary */
+    font-size: 2.6rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+p { /* Ord beskrivelse med eksempler */
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.content-wrapper { /* Plasserer listen og bildet side om side med et fint mellomrom, og hjelper division (60px) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+ol { /* Listen */
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    font-size: 1.3rem;
+    list-style-position: inside;
+}
+
+ol li {
+    margin: 18px;
+}
+
+ol a {
+    color: #ffffff;
+    background-color: #111111;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+ol a:hover {
+    text-decoration: underline;
+    background-color: #333333;
+}
+
+.bilde-koding { /* Rammen */ 
+    width: 272px;       
+    height: 272px;      
+    overflow: hidden;   
+    border-radius: 10px;
+}
+
+.bilde-koding img { /* Selve bildet */ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-link {
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: fixed;
+}
+
+.word-nav { /* Lager området for previous og next */
+    margin-top: 40px;
+    width: 100%;
+}
+
+.word-nav ul { /* Plasserer knappene side om side og dytter dem helt ut til hver sin kant */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.word-nav a { /* Gjør om tekstlenkene til knapper */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    background-color: #111111;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.word-nav a:hover {
+    background-color: #333333;
+}
+
+.wikipedia-container {
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.wikipedia-container a {
+    color: #042A3D;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.wikipedia-container a:hover { /* Styler Wikipedia-teksten */
+    color: #333333;
+}
