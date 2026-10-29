@@ -1,10 +1,111 @@
+---
+prosjekt: elever/Nikolaj/nikolaj-levert-uten-navn
+forslag:
+  sider-finnes:
+    poeng: 6
+    grunn: >-
+      index.html og fem begrepssider (Algorithm, Ip address, Bug, File,
+      Software) finnes.
+  wf-forside:
+    poeng: 10
+    grunn: >-
+      Overskriften er sentrert over en boks med listen til venstre og bildet til
+      høyre, som i wireframen.
+  wf-ordsider:
+    poeng: 9
+    grunn: >-
+      Home ligger øverst til venstre, ordet og definisjonen er sentrert, kilden
+      til høyre, og Previous/Next i hvert sitt hjørne. Knappene ligger nederst i
+      boksen, ikke nederst på siden.
+  nav-lenker:
+    poeng: 10
+    grunn: 'Alle lenker er relative og virker, også når index.html åpnes direkte.'
+  nav-kjede:
+    poeng: 5
+    grunn: >-
+      Previous/Next følger forsidens rekkefølge Algorithm → Ip address → Bug →
+      File → Software og går i ring.
+  filer-index:
+    poeng: 5
+    grunn: index.html ligger i rotmappen.
+  filer-html:
+    poeng: 5
+    grunn: Alle begrepssidene ligger i html/.
+  filer-css:
+    poeng: 2
+    grunn: main.css ligger i css/.
+  filer-navn:
+    poeng: 0
+    grunn: >-
+      Mappen har verken navnet ditt eller it_dictionary (oppgaven ber om
+      itDictionary_Dittnavn).
+  kode-doctype:
+    poeng: 5
+    grunn: 'Alle sider har <!DOCTYPE html>, html med lang, head med charset og body.'
+  kode-lukket:
+    poeng: 5
+    grunn: Taggene er riktig åpnet og lukket.
+  kode-innrykk:
+    poeng: 4
+    grunn: >-
+      Ryddig innrykk, men to <p> står på samme linje, og lenken i
+      wikipedia-container er ikke rykket inn.
+  kode-struktur:
+    poeng: 5
+    grunn: 'Bruker section, div og nav på en gjennomtenkt måte.'
+  kode-nosting:
+    poeng: 5
+    grunn: >-
+      God og semantisk: section som kort, div.content-wrapper med flex rundt
+      listen og bildet, nav > ul > li > a for Previous/Next.
+  kode-fonter:
+    poeng: 0
+    grunn: >-
+      Ingen eksterne fonter. system-ui og Times New Roman er fonter som allerede
+      ligger på maskinen.
+  kode-css-kobling:
+    poeng: 4
+    grunn: >-
+      Tagger (body, section, h1, p, ol, li) og klasser (.content-wrapper,
+      .home-link, .word-nav, .bilde-koding) brukes, også sammensatte selektorer
+      som .word-nav a. Ingen id-er.
+  design-kontrast:
+    poeng: 5
+    grunn: >-
+      Mørk tekst på #67a39b (6,6:1), hvit tekst på svarte knapper og Home på
+      mørk bakgrunn gir god kontrast.
+  design-fonter:
+    poeng: 2
+    grunn: >-
+      Sans-serif på h1 og Times New Roman på p gir tydelig skille mellom
+      overskrift og forklaring.
+forbedring: >-
+  Det viktigste du kan jobbe med, er eksterne fonter. Koden og oppsettet ditt er
+  ryddig og følger wireframen godt, men du bruker bare fonter som allerede
+  ligger på maskinen. Velg to fonter på Google Fonts (for eksempel via
+  fontjoy.com), lim inn <link>-taggen i head på alle sidene, og bruk dem med
+  font-family på h1 og p.
+
+
+  Et lite tips i tillegg: Prøv å bruke en id der noe bare finnes én gang på
+  siden, for eksempel Home-lenken, så har du brukt alle tre typene selektorer.
+  Husk også å gi prosjektmappen navnet itDictionary_Nikolaj.
+forutsetninger: >-
+  Levering: Mappen inneholder .DS_Store (laget på Mac). Ukjent om den ble levert
+  som ZIP; ZIP-fila finnes ikke i arbeidsmappen.
+
+  Navn: Innleveringen har ikke elevnavn. Mappen er gitt navnet
+  «nikolaj-levert-uten-navn» i etterkant for å holde styr på hvem den tilhører.
+
+  Rettelser: Ingen filer er endret.
+---
 # Nikolaj – IT Dictionary
 
 **Navn:** Mappen heter `nikolaj-levert-uten-navn`; innleveringen har ikke elevnavn i mappenavnet (oppgaven ber om `itDictionary_Dittnavn`).
 
 **Status:** Foreløpig filvurdering, ikke endelig karakter. ZIP-ene finnes ikke i arbeidsmappen. AI-/kodeforståelse avklares i samtalen.
 
-Prosjekt: [nikolaj-levert-uten-navn/index.html](nikolaj-levert-uten-navn/index.html)
+Prosjekt: [elever/Nikolaj/nikolaj-levert-uten-navn/index.html](elever/Nikolaj/nikolaj-levert-uten-navn/index.html)
 
 ## Poeng
 

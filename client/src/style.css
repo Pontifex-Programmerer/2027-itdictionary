@@ -1,0 +1,524 @@
+:root {
+  --bg: #f6f5f2;
+  --flate: #ffffff;
+  --tekst: #1d1d1f;
+  --dempet: #5f6168;
+  --kant: #e2e0db;
+  --aksent: #2f5fd0;
+  --dok: #2f8a5b;
+  --uavklart: #c9c6be;
+  --tapt: #c2453b;
+  --satt: #2f5fd0;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141517;
+    --flate: #1e2023;
+    --tekst: #ececee;
+    --dempet: #a3a6ad;
+    --kant: #33363b;
+    --aksent: #8fb0ff;
+    --dok: #4cb37f;
+    --uavklart: #4a4d53;
+    --tapt: #e2685e;
+    --satt: #8fb0ff;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--tekst);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 16px 64px;
+}
+
+main.smal { max-width: 860px; }
+
+a { color: var(--aksent); }
+
+h1, h2 { line-height: 1.2; }
+
+/* Forside */
+
+.forsidehode h1 { font-size: 2.25rem; margin: 0 0 8px; }
+.forsidehode p { color: var(--dempet); margin: 0 0 32px; max-width: 60ch; }
+
+.rutenett {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 760px) {
+  .rutenett { grid-template-columns: repeat(3, 1fr); }
+}
+
+.flis {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 16px 12px;
+  padding: 20px;
+  background: var(--flate);
+  border: 1px solid var(--kant);
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color .15s, transform .15s;
+}
+
+.flis:hover, .flis:focus-visible {
+  border-color: var(--aksent);
+  transform: translateY(-2px);
+}
+
+.flis:focus-visible { outline: 2px solid var(--aksent); outline-offset: 2px; }
+
+.flis .navn { font-size: 1.25rem; font-weight: 600; }
+.flis .stolpe, .flis .poeng { grid-column: 1 / -1; }
+.flis .poeng { color: var(--dempet); font-size: .875rem; margin-top: -8px; }
+
+/* Karakter */
+
+.karakterboks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.karakterboks .etikett {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--dempet);
+}
+
+.karakterboks .karakter {
+  font-size: 2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.karakterboks.ferdig .karakter { color: var(--satt); }
+.karakterboks.ingen .karakter { color: var(--dempet); }
+
+/* Poengstolpe */
+
+.stolpe {
+  display: flex;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--kant);
+}
+
+.stolpe span { display: block; height: 100%; }
+.dok { background: var(--dok); }
+.uavklart { background: var(--uavklart); }
+.tapt { background: var(--tapt); }
+
+/* Elevside */
+
+.tilbake { display: inline-block; margin-bottom: 24px; text-decoration: none; }
+.tilbake:hover { text-decoration: underline; }
+
+.elevhode {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.elevhode h1 { font-size: 2.25rem; margin: 0; }
+.elevhode .karakterboks .karakter { font-size: 2.75rem; }
+
+.nettsidelenke { display: inline-block; margin-top: 6px; font-size: .9375rem; text-decoration: none; }
+.nettsidelenke:hover { text-decoration: underline; }
+
+.overlinje {
+  margin: 0 0 4px;
+  color: var(--dempet);
+  font-size: .875rem;
+}
+
+.oppsummering {
+  margin: 24px 0 8px;
+  padding: 20px;
+  background: var(--flate);
+  border: 1px solid var(--kant);
+  border-radius: 12px;
+}
+
+.forklaring {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--dempet);
+  font-size: .9375rem;
+}
+
+.forklaring strong { color: var(--tekst); font-variant-numeric: tabular-nums; }
+
+.prikk {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  border-radius: 50%;
+}
+
+.vurdering h2 {
+  font-size: 1.25rem;
+  margin: 36px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--kant);
+}
+
+.vurdering ul { padding-left: 20px; }
+.vurdering li { margin-bottom: 6px; }
+
+.vurdering code {
+  font: .875em ui-monospace, Consolas, monospace;
+  padding: 1px 5px;
+  background: var(--flate);
+  border: 1px solid var(--kant);
+  border-radius: 4px;
+  overflow-wrap: anywhere;
+}
+
+.tabell { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--flate);
+  border: 1px solid var(--kant);
+  border-radius: 12px;
+  font-size: .9375rem;
+}
+
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--kant);
+}
+
+th { font-size: .8125rem; color: var(--dempet); font-weight: 600; }
+tbody tr:last-child td { border-bottom: 0; }
+.tall { text-align: right; white-space: nowrap; }
+
+/* Vurderingsskjema */
+
+.seksjon {
+  margin-top: 32px;
+}
+
+.seksjon h2, .vurdering h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.seksjonspoeng {
+  color: var(--dempet);
+  font-size: 1rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.hjelp { color: var(--dempet); font-size: .875rem; margin: 24px 0 0; }
+
+main.elevside { max-width: 1120px; }
+
+/* Kriteriene til venstre, seksjonens notat til høyre */
+.seksjonsrutenett {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .seksjonsrutenett { grid-template-columns: minmax(0, 1fr) 280px; }
+}
+
+.sidenotat { display: flex; flex-direction: column; padding-top: 22px; }
+.sidenotat textarea { flex: 1; min-height: 96px; }
+
+/* Kriterium | Forslag | Poeng */
+.kolonnehode, .kriterium {
+  display: grid;
+  grid-template-columns: 1fr 72px 112px;
+  gap: 4px 16px;
+  align-items: center;
+}
+
+.kolonnehode {
+  padding: 0 20px 6px;
+  color: var(--dempet);
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.kolonnehode span:nth-child(2) { text-align: center; }
+.kolonnehode span:nth-child(3) { text-align: center; }
+
+.kriterium {
+  grid-template-areas: "tekst forslag felt" "grunn grunn grunn";
+  margin: 0 0 8px;
+  padding: 12px 20px;
+  background: var(--flate);
+  border: 1px solid var(--kant);
+  border-radius: 12px;
+}
+
+.kriterium:focus-within { border-color: var(--aksent); }
+
+.ktekst { grid-area: tekst; display: flex; flex-direction: column; }
+.ktittel { font-weight: 600; }
+
+.kbeskrivelse {
+  display: block;
+  color: var(--dempet);
+  font-size: .875rem;
+  font-weight: 400;
+}
+
+.bonus {
+  margin-left: 8px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--uavklart);
+  color: var(--tekst);
+  font-size: .6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  vertical-align: 2px;
+}
+
+/* Skyggekolonnen: Claudes forslag */
+.forslag { display: contents; }
+
+.forslag button, .forslag .tomt {
+  grid-area: forslag;
+  justify-self: center;
+  min-width: 40px;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px dashed var(--dempet);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--dempet);
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+}
+
+.forslag button { cursor: pointer; }
+.forslag button:hover { border-style: solid; border-color: var(--aksent); color: var(--aksent); }
+.forslag .tomt { border-color: transparent; display: grid; place-items: center; }
+
+.grunn {
+  grid-area: grunn;
+  color: var(--dempet);
+  font-size: .8125rem;
+  font-style: italic;
+}
+
+/* Poengfeltet er én kontroll: [+/−] [poeng / maks] */
+.poengfelt {
+  grid-area: felt;
+  justify-self: center;
+  display: flex;
+  align-items: stretch;
+  height: 44px;
+  border: 1px solid var(--kant);
+  border-radius: 8px;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.poengfelt:focus-within { border-color: var(--aksent); box-shadow: 0 0 0 1px var(--aksent); }
+
+.stepper {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--kant);
+}
+
+.stepper button {
+  flex: 1;
+  width: 26px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--dempet);
+  font: inherit;
+  font-size: .875rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.stepper button + button { border-top: 1px solid var(--kant); }
+.stepper button:hover { background: var(--flate); color: var(--aksent); }
+
+.poengfelt input {
+  width: 34px;
+  padding: 0 2px 0 0;
+  border: 0;
+  background: transparent;
+  color: var(--tekst);
+  font: inherit;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  outline: none;
+}
+
+.poengfelt input::placeholder { color: var(--dempet); font-weight: 400; }
+
+.kmaks {
+  align-self: center;
+  padding-right: 10px;
+  color: var(--dempet);
+  font-size: 1.0625rem;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Karakter og tilbakemelding */
+.karakterkort {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.kort {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px 20px;
+  background: var(--flate);
+  border: 1px solid var(--kant);
+  border-radius: 12px;
+}
+
+.kort .etikett {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--dempet);
+}
+
+.kort .karakter { font-size: 2.5rem; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.kort.ferdig .karakter { color: var(--satt); }
+.kort.ingen .karakter, .kort.delvis .karakter { color: var(--dempet); }
+.kortpoeng { color: var(--dempet); font-size: .875rem; }
+
+.forslagskort { background: transparent; border-style: dashed; border-color: var(--dempet); }
+.forslagskort .karakter { color: var(--dempet); }
+
+@media (max-width: 560px) {
+  .kolonnehode { display: none; }
+  .kriterium {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "tekst tekst" "forslag felt" "grunn grunn";
+  }
+  .forslag button, .forslag .tomt { justify-self: start; }
+  .poengfelt { justify-self: end; }
+}
+
+.notat {
+  display: block;
+  color: var(--dempet);
+  font-size: .875rem;
+}
+
+.notat textarea {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px 12px;
+  background: var(--flate);
+  color: var(--tekst);
+  border: 1px solid var(--kant);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.notat textarea:focus { outline: 2px solid var(--aksent); outline-offset: -1px; }
+
+.feilmelding { color: var(--tapt); }
+
+.skjult { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.lagrelinje {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 24px -16px 0;
+  padding: 12px 16px;
+  background: var(--bg);
+  border-top: 1px solid var(--kant);
+  color: var(--dempet);
+  font-size: .875rem;
+}
+
+.knapper { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+
+.lagrelinje button, .lagrelinje .knapp {
+  padding: 10px 18px;
+  background: var(--aksent);
+  color: var(--flate);
+  border: 1px solid var(--aksent);
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.lagrelinje .sekundær { background: transparent; color: var(--aksent); }
+.lagrelinje button:disabled { opacity: .5; cursor: not-allowed; }
+
+details.vurdering {
+  margin-top: 40px;
+  padding: 16px 20px;
+  border: 1px solid var(--kant);
+  border-radius: 12px;
+}
+
+details.vurdering summary { cursor: pointer; font-weight: 600; }
+
+@media (max-width: 560px) {
+  main { padding-top: 32px; }
+  .elevhode { flex-direction: column; align-items: flex-start; }
+  .elevhode .karakterboks { align-items: flex-start; text-align: left; }
+  th, td { padding: 8px; }
+}
